@@ -1,12 +1,16 @@
+import { Provider } from 'react-redux';
 import React from 'react';
+import store from './setup/store';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import AppConnected from './containers/App';
+import './index.scss';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const Init: React.FC = () => {
+  return (
+    <Provider store={store}>
+      <AppConnected />
+    </Provider>
+  );
+};
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<Init />, document.getElementById('root'));
