@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-prettier",
+    "stylelint-prettier/recommended"
+  ],
+  "plugins": [
+    "stylelint-prettier"
+  ],
+  "rules": {
+    "selector-max-id": 1,
+    "scss/selector-no-redundant-nesting-selector": true,
+    "prettier/prettier": true,
+    "max-nesting-depth": [2],
+    "selector-class-pattern": null
+  }
+}

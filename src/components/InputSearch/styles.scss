@@ -1,0 +1,27 @@
+@import '../../styles/settings';
+
+.c-input-search {
+  font-size: 1rem;
+  position: relative;
+
+  &__input {
+    appearance: none;
+    background-color: $white-smoke-color;
+    border: 0;
+    border-radius: 45px;
+    cursor: text;
+    font-size: 0.8em;
+    min-width: 15em;
+    outline: care;
+    padding: 0.5em;
+    padding-left: 2.5em;
+    width: 100%;
+  }
+
+  &__icon {
+    left: 0.5em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
