@@ -3,7 +3,8 @@
 .c-dogs-recipes-searcher {
   box-shadow: 0 8px 30px $light-gray-color;
   font-size: 1rem;
+  margin-bottom: 3em;
   position: sticky;
   top: 0;
-  margin-bottom: 3em;
+  z-index: 10;
 }

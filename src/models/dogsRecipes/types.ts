@@ -16,12 +16,16 @@ export interface DogsRecipesState {
 /* ACTIONS */
 export interface FetchDogsRecipesSuccess extends AnyAction {
   type: typeof AT.FETCH_DOGS_RECIPES_SUCCESS;
-  payload: DogsRecipesJsonData;
+  payload: {
+    json: DogsRecipesJsonData;
+  };
 }
 
 export interface FetchDogsRecipes extends AnyAction {
   type: typeof AT.FETCH_DOGS_RECIPES;
-  payload: string;
+  payload: {
+    query: string;
+  };
 }
 
 export interface EmitFetchDogsRecipesFinish extends AnyAction {

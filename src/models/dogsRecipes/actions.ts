@@ -1,17 +1,17 @@
 import * as T from './types';
 import { actionTypes as AT } from './constants';
 
-export function fetchDogsRecipes(payload: string): T.FetchDogsRecipes {
+export function fetchDogsRecipes(query: string): T.FetchDogsRecipes {
   return {
     type: AT.FETCH_DOGS_RECIPES,
-    payload,
+    payload: { query },
   };
 }
 
-export function fetchDogsRecipesSuccess(payload: T.DogsRecipesJsonData): T.FetchDogsRecipesSuccess {
+export function fetchDogsRecipesSuccess(json: T.DogsRecipesJsonData): T.FetchDogsRecipesSuccess {
   return {
     type: AT.FETCH_DOGS_RECIPES_SUCCESS,
-    payload,
+    payload: { json },
   };
 }
 

@@ -11,7 +11,7 @@ const mapStateToProps = (state: RootState): DogsRecipesListState => ({
   dogsRecipes: dogsRecipesSelector(state),
 });
 
-const connector = connect(mapStateToProps);
+const connector = connect(mapStateToProps, {});
 
 export type PropsFromRedux = ConnectedProps<typeof connector>;
 

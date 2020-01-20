@@ -6,9 +6,15 @@ import { FetchDogsRecipes } from './types';
 import { actionTypes as at } from './constants';
 import { endpoint } from './constants';
 
-function* fetchDogBreedsSaga({ payload }: FetchDogsRecipes): SagaIterator {
-  const request = yield call(fetch, `${endpoint}?i=${payload}`);
-  const data = yield request.json();
+export async function fetchDogsRecipesApi(query: string): Promise<T.DogsRecipesJsonData> {
+  const response = await fetch(`${endpoint}?i=${query}`);
+
+  return response.json();
+}
+
+export function* fetchDogBreedsSaga({ payload }: FetchDogsRecipes): SagaIterator {
+  const { query } = payload;
+  const data = yield call(fetchDogsRecipesApi, query);
 
   yield put(fetchDogsRecipesSuccess(data as T.DogsRecipesJsonData));
   yield put(emitFetchDogsRecipesFinish());
