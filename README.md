@@ -24,6 +24,18 @@ This challenge should be done by using the free to use ​RecipePuppy API​. We
 
 <p style="text-align:center"><img src="./screenshot.png"></p>
 
+## Setup
+
+Install the dependencies:
+
+```sh
+    npm install
+```
+or
+```sh
+    yarn install
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
