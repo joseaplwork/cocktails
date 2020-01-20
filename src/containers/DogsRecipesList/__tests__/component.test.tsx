@@ -4,15 +4,23 @@ import { DogsRecipies } from 'models/dogsRecipes/types';
 import DogsRecipesList from '../component';
 
 describe('App - container', () => {
-  it('should render basic view with no items in the list', () => {
+  it('should render basic view with', () => {
     const mockDogsRecipes: DogsRecipies = [];
 
     render(<DogsRecipesList dogsRecipes={mockDogsRecipes} />);
 
     const component = document.querySelector('.c-dogs-recipes-list');
-    const cards = document.querySelectorAll('.c-dogs-recipes-list__card');
 
     expect(component).toBeInTheDocument();
+  });
+
+  it('should render basic view with no items in the list', () => {
+    const mockDogsRecipes: DogsRecipies = [];
+
+    render(<DogsRecipesList dogsRecipes={mockDogsRecipes} />);
+
+    const cards = document.querySelectorAll('.c-dogs-recipes-list__card');
+
     expect(cards.length).toEqual(0);
   });
 
