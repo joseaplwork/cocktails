@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import React from 'react';
 
 import store from './setup/store';
@@ -7,7 +7,7 @@ import AppConnected from './containers/App';
 
 import './index.scss';
 
-const Init: React.FC = () => {
+const Init = () => {
   return (
     <Provider store={store}>
       <AppConnected />
@@ -15,4 +15,6 @@ const Init: React.FC = () => {
   );
 };
 
-ReactDOM.render(<Init />, document.getElementById('root'));
+const root = createRoot(document.getElementById('root')!);
+
+root.render(<Init />);
