@@ -1,4 +1,54 @@
-@import './settings';
+@import './1-settings';
+
+// COLORS
+.u-color--primary {
+  color: $text-color-primary !important;
+}
+
+.u-color--secondary {
+  color: $text-color-secondary !important;
+}
+
+.u-color--white {
+  color: $white-color !important;
+}
+
+.u-color--black {
+  color: $black-color !important;
+}
+
+// BACKGROUNDS
+.u-bg--primary {
+  background-color: $color-primary !important;
+}
+
+.u-bg--secondary {
+  background-color: $color-secondary !important;
+}
+
+.u-bg--white {
+  background-color: $white-color !important;
+}
+
+.u-bg--white-smoke {
+  background-color: $white-smoke-color !important;
+}
+
+.u-bg--silver {
+  background-color: $silver-color !important;
+}
+
+.u-bg--matterhorn {
+  background-color: $matterhorn-color !important;
+}
+
+.u-bg--royal-blue {
+  background-color: $royal-blue-color !important;
+}
+
+.u-bg--corn-blue {
+  background-color: $corn-blue-color !important;
+}
 
 // FONT
 .u-font-xs {

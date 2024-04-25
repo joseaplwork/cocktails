@@ -1,4 +1,4 @@
-@import './settings';
+@import './1-settings';
 
 // LAYOUT
 .o-container {
@@ -125,10 +125,4 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-// LINKS
-.o-link--no-style {
-  color: inherit;
-  text-decoration: none;
 }

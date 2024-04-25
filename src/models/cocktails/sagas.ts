@@ -6,7 +6,7 @@ import { FetchCocktails } from './types';
 import { actionTypes as at } from './constants';
 import { endpoint } from './constants';
 
-export async function fetchCocktailsApi(query: string): Promise<T.CocktailsJsonData> {
+export async function fetchCocktailsApi(query: string): Promise<T.CocktailsResponse> {
   const response = await fetch(`${endpoint}?s=${query}`);
 
   return response.json();
@@ -16,7 +16,7 @@ export function* fetchCocktailsSaga({ payload }: FetchCocktails): SagaIterator {
   const { query } = payload;
   const data = yield call(fetchCocktailsApi, query);
 
-  yield put(fetchCocktailsSuccess(data as T.CocktailsJsonData));
+  yield put(fetchCocktailsSuccess(data as T.CocktailsResponse));
   yield put(emitFetchCocktailsFinish());
 }
 

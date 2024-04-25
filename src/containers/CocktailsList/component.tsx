@@ -7,7 +7,7 @@ export default function CocktailsList({ cocktails }: PropsFromRedux): JSX.Elemen
     <div className="c-cocktails-list">
       <div className="o-container c-cocktails-list__cards u-margin--bottom-md">
         {cocktails.map((item, index) => (
-          <div className="c-cocktails-list__card t-bg--white-smoke" key={index}>
+          <div className="c-cocktails-list__card u-bg--white-smoke" key={index}>
             <div className="c-cocktails-list__image">
               {item.ingredients.match(/milk|cheese/i) ? (
                 <div className="c-cocktails-list__ribbon">Has lactose</div>

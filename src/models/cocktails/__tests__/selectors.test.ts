@@ -2,7 +2,7 @@ import { cocktailsReducerSelector, cocktailsSelector } from '../selectors';
 import { CocktailsState, Cocktails } from '../types';
 
 describe('Cocktails - selectors', () => {
-  it('should select the searcher state', () => {
+  it('should select the whole state', () => {
     const CocktailsReducer: CocktailsState = { cocktails: [] };
     const mockedState = {
       CocktailsReducer,
@@ -11,13 +11,13 @@ describe('Cocktails - selectors', () => {
     expect(cocktailsReducerSelector(mockedState)).toEqual(CocktailsReducer);
   });
 
-  it('should select the searcher state', () => {
-    const cocktails: Cocktails = [{ title: 'test', thumbnail: 'test', ingredients: 'test', href: 'test' }];
+  it('should select the cocktails', () => {
+    const cocktails: Cocktails = [{ title: 'test', thumbnail: 'test', ingredients: 'test' }];
     const CocktailsReducer: CocktailsState = { cocktails };
     const mockedState = {
       CocktailsReducer,
     };
 
-    expect(cocktailsSelector(mockedState)).toEqual(Cocktails);
+    expect(cocktailsSelector(mockedState)).toEqual(cocktails);
   });
 });

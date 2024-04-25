@@ -4,8 +4,7 @@
   width: 100%;
 }
 
-@import './styles/settings';
-@import './styles/theme';
-@import './styles/elements';
-@import './styles/objects';
-@import './styles/utilities';
+@import './styles/1-settings';
+@import './styles/3-elements';
+@import './styles/4-objects';
+@import './styles/5-utilities';

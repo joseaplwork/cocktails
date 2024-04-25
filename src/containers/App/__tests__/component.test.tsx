@@ -2,10 +2,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import App from '../component';
 
-jest.mock('containers/CocktailsSearcher');
-jest.mock('containers/CocktailsList');
+jest.mock('containers/CocktailsSearchBar/CocktailsSearchBar');
+jest.mock('containers/CocktailsList/CocktailsList');
 
-describe('App - container', () => {
+describe('App component', () => {
   const mockOnEmitAppStarted = jest.fn();
 
   it('should render basic view', () => {
@@ -22,12 +22,12 @@ describe('App - container', () => {
     expect(mockOnEmitAppStarted).toHaveBeenCalled();
   });
 
-  it('should render `CocktailsList` and `CocktailsSearcher` containers', () => {
+  it('should render `CocktailsList` and `CocktailsSearchBar` containers', () => {
     const { queryByTestId } = render(<App onEmitAppStarted={mockOnEmitAppStarted} />);
     const CocktailsList = queryByTestId('CocktailsList');
-    const CocktailsSearcher = queryByTestId('CocktailsSearcher');
+    const CocktailsSearchBar = queryByTestId('CocktailsSearchBar');
 
-    expect(CocktailsSearcher).toBeTruthy();
+    expect(CocktailsSearchBar).toBeTruthy();
     expect(CocktailsList).toBeTruthy();
   });
 });

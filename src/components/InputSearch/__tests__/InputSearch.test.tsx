@@ -2,13 +2,13 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import InputSearch from '../index';
 
-jest.mock('components/SearchIcon');
+jest.mock('components/SearchIcon/SearchIcon');
 
 describe('App - container', () => {
   const mockOnKeyPress = jest.fn();
 
   beforeEach(() => {
-    mockOnKeyPress.mockReset();
+    mockOnKeyPress.mockClear();
   });
 
   it('should render basic view', () => {

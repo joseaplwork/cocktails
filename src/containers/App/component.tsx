@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import CocktailsSearcher from 'containers/CocktailsSearcher/CocktailsSearcher';
+import CocktailsSearchBar from 'containers/CocktailsSearchBar/CocktailsSearchBar';
 import CocktailsList from 'containers/CocktailsList';
 import { PropsFromRedux } from './index';
 import './styles.scss';
@@ -10,8 +10,8 @@ export default function App({ onEmitAppStarted }: PropsFromRedux): JSX.Element {
   }, [onEmitAppStarted]);
 
   return (
-    <div className="c-app t-bg--white-smoke">
-      <CocktailsSearcher />
+    <div className="c-app u-bg--white-smoke">
+      <CocktailsSearchBar />
       <CocktailsList />
     </div>
   );

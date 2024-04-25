@@ -4,7 +4,6 @@ import { AnyAction } from 'redux';
 /* STATE */
 export type Cocktails = Array<{
   title: string;
-  href: string;
   ingredients: string;
   thumbnail: string;
 }>;
@@ -17,7 +16,7 @@ export interface CocktailsState {
 export interface FetchCocktailsSuccess extends AnyAction {
   type: typeof AT.FETCH_COCKTAILS_SUCCESS;
   payload: {
-    json: CocktailsJsonData;
+    json: CocktailsResponse;
   };
 }
 
@@ -35,23 +34,27 @@ export interface EmitFetchCocktailsFinish extends AnyAction {
 export type CocktailsActions = FetchCocktails | FetchCocktailsSuccess | EmitFetchCocktailsFinish;
 
 /* ACTIONS DATA */
-export interface CocktailsJsonData {
+export interface CocktailsDTO {
   idDrink: string;
   strDrink: string;
   strDrinkThumb: string;
-  strIngredient1: string | null;
-  strIngredient2: string | null;
-  strIngredient3: string | null;
-  strIngredient4: string | null;
-  strIngredient5: string | null;
-  strIngredient6: string | null;
-  strIngredient7: string | null;
-  strIngredient8: string | null;
-  strIngredient9: string | null;
-  strIngredient10: string | null;
-  strIngredient11: string | null;
-  strIngredient12: string | null;
-  strIngredient13: string | null;
-  strIngredient14: string | null;
-  strIngredient15: string | null;
+  strIngredient1?: string | null;
+  strIngredient2?: string | null;
+  strIngredient3?: string | null;
+  strIngredient4?: string | null;
+  strIngredient5?: string | null;
+  strIngredient6?: string | null;
+  strIngredient7?: string | null;
+  strIngredient8?: string | null;
+  strIngredient9?: string | null;
+  strIngredient10?: string | null;
+  strIngredient11?: string | null;
+  strIngredient12?: string | null;
+  strIngredient13?: string | null;
+  strIngredient14?: string | null;
+  strIngredient15?: string | null;
+}
+
+export interface CocktailsResponse {
+  drinks: Array<CocktailsDTO>;
 }

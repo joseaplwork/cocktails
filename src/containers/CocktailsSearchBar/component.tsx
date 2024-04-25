@@ -1,9 +1,9 @@
 import React from 'react';
 import InputSearch from 'components/InputSearch';
-import { PropsFromRedux } from './CocktailsSearcher';
+import { PropsFromRedux } from './CocktailsSearchBar';
 import './styles.scss';
 
-export default function CocktailsSearcher({ onSearchChange }: PropsFromRedux): JSX.Element {
+export default function CocktailsSearchBar({ onSearchChange }: PropsFromRedux): JSX.Element {
   const onInputSearchChange = (evt: React.KeyboardEvent<HTMLInputElement>): void => {
     const { value } = evt.currentTarget;
 
@@ -13,7 +13,7 @@ export default function CocktailsSearcher({ onSearchChange }: PropsFromRedux): J
   };
 
   return (
-    <div className="c-cocktails-searcher t-bg--white u-padding--top-md u-padding--bottom u-padding--left u-padding--right">
+    <div className="c-cocktails-search-bar u-bg--primary u-padding--top-md u-padding--bottom u-padding--left u-padding--right">
       <div className="o-container">
         <InputSearch onKeyPress={onInputSearchChange} />
       </div>

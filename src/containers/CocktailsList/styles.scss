@@ -1,10 +1,11 @@
-@import '../../styles/settings';
+@import '../../styles/1-settings';
 
 .c-cocktails-list {
   font-size: 1rem;
+  padding: 2rem;
 
   &__cards {
-    align-items: flex-start;
+    align-items: stretch;
     display: grid;
     grid-gap: 2em;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -15,7 +16,7 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     margin: 0 auto;
     overflow: hidden;
-    width: 300px;
+    width: 100%;
   }
 
   &__image {

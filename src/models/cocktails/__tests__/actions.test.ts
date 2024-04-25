@@ -22,10 +22,7 @@ describe('cocktails - actions', () => {
 
   it('should return the correct object for action `fetchCocktailsSuccess`', () => {
     const json = {
-      title: 'test',
-      version: 1,
-      href: 'test',
-      results: [],
+      drinks: [],
     };
     const expected = {
       type: at.FETCH_COCKTAILS_SUCCESS,

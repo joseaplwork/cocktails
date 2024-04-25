@@ -8,7 +8,7 @@ export function fetchCocktails(query: string): T.FetchCocktails {
   };
 }
 
-export function fetchCocktailsSuccess(json: T.CocktailsJsonData): T.FetchCocktailsSuccess {
+export function fetchCocktailsSuccess(json: T.CocktailsResponse): T.FetchCocktailsSuccess {
   return {
     type: AT.FETCH_COCKTAILS_SUCCESS,
     payload: { json },

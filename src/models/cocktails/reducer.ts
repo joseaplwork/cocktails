@@ -11,12 +11,12 @@ export default function CocktailsReducer(
 ): T.CocktailsState {
   switch (action.type) {
     case AT.FETCH_COCKTAILS_SUCCESS:
-      const { drinks } = action.payload.json;
+      const { drinks } = action.payload.json as T.CocktailsResponse;
       const cocktails =
-        drinks.map((drink: T.CocktailsJsonData) => ({
+        drinks?.map((drink: T.CocktailsDTO) => ({
           title: drink.strDrink,
           ingredients: [...Array(15)]
-            .map((_, i: number) => drink[`strIngredient${i}` as keyof T.CocktailsJsonData])
+            .map((_, i: number) => drink[`strIngredient${i}` as keyof T.CocktailsDTO])
             .filter(v => v)
             .join(', '),
           thumbnail: drink.strDrinkThumb,
