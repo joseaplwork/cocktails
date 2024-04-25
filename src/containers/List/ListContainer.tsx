@@ -3,7 +3,7 @@ import { connect, ConnectedProps } from 'react-redux';
 import { RootState } from 'setup/types';
 import { cocktailsSelector, Cocktails } from 'models/cocktails';
 
-import SearchBar from './view';
+import SearchBar from './ListComponent';
 
 interface ListState {
   cocktails: Cocktails;

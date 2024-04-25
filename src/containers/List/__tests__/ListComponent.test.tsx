@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 
 import { Cocktails } from 'models/cocktails';
 
-import List from '../view';
+import List from '../ListComponent';
 
 describe('List component', () => {
   it('should render basic view with', () => {

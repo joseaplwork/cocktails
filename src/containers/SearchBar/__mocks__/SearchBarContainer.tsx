@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function SearchBar(): JSX.Element {
+export default function SearchBarContainer(): JSX.Element {
   return <div data-testid="SearchBar"></div>;
 }

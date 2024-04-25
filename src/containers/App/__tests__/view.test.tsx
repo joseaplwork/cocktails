@@ -3,8 +3,8 @@ import { render } from '@testing-library/react';
 
 import App from '../view';
 
-jest.mock('containers/SearchBar/SearchBar');
-jest.mock('containers/List/List');
+jest.mock('containers/SearchBar/SearchBarContainer');
+jest.mock('containers/List/ListContainer');
 
 describe('App component', () => {
   const mockOnEmitAppStarted = jest.fn();

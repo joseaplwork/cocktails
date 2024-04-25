@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PropsFromRedux } from './List';
+import { PropsFromRedux } from './ListContainer';
 
 import './styles.scss';
 
