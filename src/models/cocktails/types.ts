@@ -1,5 +1,6 @@
-import { actionTypes as AT } from './constants';
 import { AnyAction } from 'redux';
+
+import { actionTypes as AT } from './constants';
 
 /* STATE */
 export type Cocktails = Array<{

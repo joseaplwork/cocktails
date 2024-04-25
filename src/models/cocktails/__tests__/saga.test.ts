@@ -1,4 +1,5 @@
 import { put, call } from 'redux-saga/effects';
+
 import { CocktailsResponse } from '../types';
 import { fetchCocktailsSaga, fetchCocktailsApi } from '../sagas';
 import { fetchCocktails, fetchCocktailsSuccess, emitFetchCocktailsFinish } from '../actions';

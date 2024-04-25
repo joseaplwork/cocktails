@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { PropsFromRedux } from './List';
+
 import './styles.scss';
 
 export default function List({ cocktails }: PropsFromRedux): JSX.Element {

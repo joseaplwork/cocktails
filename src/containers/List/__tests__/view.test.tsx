@@ -1,6 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { Cocktails } from 'models/cocktails/types';
+
+import { Cocktails } from 'models/cocktails';
+
 import List from '../view';
 
 describe('List view', () => {

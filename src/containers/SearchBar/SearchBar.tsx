@@ -1,5 +1,7 @@
 import { connect, ConnectedProps } from 'react-redux';
-import { fetchCocktails } from 'models/cocktails/actions';
+
+import { fetchCocktails } from 'models/cocktails';
+
 import SearchBar from './view';
 
 const mapDispatchToProps = {

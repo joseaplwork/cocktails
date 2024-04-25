@@ -1,5 +1,7 @@
 import React from 'react';
+
 import SearchIcon from 'components/SearchIcon';
+
 import './styles.scss';
 
 interface Props {

@@ -1,7 +1,8 @@
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
-import CocktailsReducer from '../models/cocktails/reducer';
+import CocktailsReducer from 'models/cocktails/reducer';
+
 import rootSaga from './sagas';
 
 const composeEnhancers =

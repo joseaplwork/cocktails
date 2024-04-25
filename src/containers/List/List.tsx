@@ -1,11 +1,12 @@
 import { connect, ConnectedProps } from 'react-redux';
+
 import { RootState } from 'setup/types';
-import * as T from 'models/cocktails/types';
-import { cocktailsSelector } from 'models/cocktails/selectors';
+import { cocktailsSelector, Cocktails } from 'models/cocktails';
+
 import SearchBar from './view';
 
 interface ListState {
-  cocktails: T.Cocktails;
+  cocktails: Cocktails;
 }
 const mapStateToProps = (state: RootState): ListState => ({
   cocktails: cocktailsSelector(state),

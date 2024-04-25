@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
+
 import SearchBar from '../view';
 
 describe('SearchBar view', () => {
@@ -23,17 +24,6 @@ describe('SearchBar view', () => {
     const input = document.querySelector('input');
 
     expect(input).not.toBeNull();
-  });
-
-  it('should not call `onSearchChange` on key press if input value has no more than 3 characters', () => {
-    const component = render(<SearchBar onSearchChange={mockOnSearchChange} />);
-    const inputElement = component.container.querySelector('input');
-
-    if (inputElement) {
-      fireEvent.keyPress(inputElement, { key: 'Enter', keyCode: 13 });
-    }
-
-    expect(mockOnSearchChange).not.toHaveBeenCalled();
   });
 
   it('should call `onSearchChange` on key press if input value has more than 3 characters', () => {

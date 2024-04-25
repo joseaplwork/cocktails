@@ -1,8 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import SearchIcon from '../index';
 
-describe('App - container', () => {
+import SearchIcon from '../SearchIcon';
+
+describe('SearchIcon component', () => {
   it('should render basic view', () => {
     render(<SearchIcon size="100" />);
 

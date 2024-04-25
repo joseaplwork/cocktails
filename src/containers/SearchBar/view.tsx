@@ -1,6 +1,9 @@
 import React from 'react';
+
 import InputSearch from 'components/InputSearch';
+
 import { PropsFromRedux } from './SearchBar';
+
 import './styles.scss';
 
 export default function SearchBar({ onSearchChange }: PropsFromRedux): JSX.Element {

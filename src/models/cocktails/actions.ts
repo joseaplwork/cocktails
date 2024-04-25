@@ -1,5 +1,5 @@
-import * as T from './types';
 import { actionTypes as AT } from './constants';
+import * as T from './types';
 
 export function fetchCocktails(query: string): T.FetchCocktails {
   return {

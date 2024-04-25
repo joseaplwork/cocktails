@@ -1,5 +1,5 @@
-import * as T from './types';
 import { actionTypes as at } from './constants';
+import * as T from './types';
 
 export function emitAppStarted(): T.EmitAppReadyAction {
   return {
