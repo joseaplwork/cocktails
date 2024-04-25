@@ -7,7 +7,7 @@ export default function SearchBar({ onSearchChange }: PropsFromRedux): JSX.Eleme
   const onInputSearchChange = (evt: React.KeyboardEvent<HTMLInputElement>): void => {
     const { value } = evt.currentTarget;
 
-    if ((evt.keyCode === 13 || evt.charCode === 13) && value.length > 2) {
+    if (evt.keyCode === 13 || evt.charCode === 13) {
       onSearchChange(encodeURIComponent(value).replace(/%2C/g, ','));
     }
   };
@@ -15,7 +15,7 @@ export default function SearchBar({ onSearchChange }: PropsFromRedux): JSX.Eleme
   return (
     <div className="c-cocktails-search-bar u-bg--primary u-padding--top-md u-padding--bottom u-padding--left u-padding--right">
       <div className="o-container">
-        <InputSearch onKeyPress={onInputSearchChange} />
+        <InputSearch placeholder="Type your message and press Enter to continue" onKeyPress={onInputSearchChange} />
       </div>
     </div>
   );

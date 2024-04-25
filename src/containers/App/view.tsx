@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import SearchBar from 'containers/SearchBar/SearchBar';
+import SearchBar from 'containers/SearchBar';
 import List from 'containers/List';
-import { PropsFromRedux } from './index';
+import { PropsFromRedux } from './App';
 import './styles.scss';
 
 export default function App({ onEmitAppStarted }: PropsFromRedux): JSX.Element {

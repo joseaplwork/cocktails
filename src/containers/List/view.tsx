@@ -15,8 +15,8 @@ export default function List({ cocktails }: PropsFromRedux): JSX.Element {
               <img src={item.thumbnail} alt={item.title} width="100%" />
             </div>
             <div className="u-padding--top-sm u-padding--bottom-sm">
-              <p className="u-font-bold u-padding--left u-padding--right">{item.ingredients}</p>
-              <p className=" u-padding--left u-padding--right">{item.title}</p>
+              <p className="u-font-bold u-padding--left u-padding--right">{item.title}</p>
+              <p className="u-padding--left u-padding--right">{item.ingredients}</p>
             </div>
           </div>
         ))}

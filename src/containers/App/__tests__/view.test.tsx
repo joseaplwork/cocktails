@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from '../component';
+import App from '../view';
 
 jest.mock('containers/SearchBar/SearchBar');
 jest.mock('containers/List/List');
 
-describe('App component', () => {
+describe('App view', () => {
   const mockOnEmitAppStarted = jest.fn();
 
   it('should render basic view', () => {

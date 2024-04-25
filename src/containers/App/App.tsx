@@ -1,6 +1,6 @@
 import { connect, ConnectedProps } from 'react-redux';
 import { emitAppStarted } from 'models/core/actions';
-import App from './component';
+import App from './view';
 
 const mapDispatchToProps = {
   onEmitAppStarted: emitAppStarted,

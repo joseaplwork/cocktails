@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import SearchBar from '../component';
+import SearchBar from '../view';
 
-describe('SearchBar component', () => {
+describe('SearchBar view', () => {
   const mockOnSearchChange = jest.fn();
 
   beforeEach(() => {

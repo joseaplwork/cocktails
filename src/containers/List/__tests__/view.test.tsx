@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { Cocktails } from 'models/cocktails/types';
-import List from '../component';
+import List from '../view';
 
-describe('List component', () => {
+describe('List view', () => {
   it('should render basic view with', () => {
     const mockCocktails: Cocktails = [];
 
