@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
-import dogsRecipesReducer from '../models/dogsRecipes/reducer';
+import CocktailsReducer from '../models/cocktails/reducer';
 import rootSaga from './sagas';
 
 const composeEnhancers =
@@ -14,7 +14,7 @@ const enhancers = [middlewareEnhancer];
 const composedEnhancers = composeEnhancers(...enhancers);
 
 export const rootReducer = combineReducers({
-  dogsRecipesReducer,
+  CocktailsReducer,
 });
 
 const store = createStore(rootReducer, {}, composedEnhancers);

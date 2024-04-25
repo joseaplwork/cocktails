@@ -5,7 +5,7 @@ interface Props {
   size: number | string;
 }
 
-export default function InputSearch({ className, size }: Props): JSX.Element {
+export default function SearchIcon({ className, size }: Props): JSX.Element {
   return (
     <svg width={size} height={size} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <path

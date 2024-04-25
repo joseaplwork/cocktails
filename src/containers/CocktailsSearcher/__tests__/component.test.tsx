@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import DogsRecipesSeacher from '../component';
+import CocktailsSeacher from '../component';
 
 describe('App - container', () => {
   const mockOnSearchChange = jest.fn();
@@ -10,15 +10,15 @@ describe('App - container', () => {
   });
 
   it('should render basic view', () => {
-    render(<DogsRecipesSeacher onSearchChange={mockOnSearchChange} />);
+    render(<CocktailsSeacher onSearchChange={mockOnSearchChange} />);
 
-    const component = document.querySelector('.c-dogs-recipes-searcher');
+    const component = document.querySelector('.c-cocktails-searcher');
 
     expect(component).toBeInTheDocument();
   });
 
   it('should render basic view with input', () => {
-    render(<DogsRecipesSeacher onSearchChange={mockOnSearchChange} />);
+    render(<CocktailsSeacher onSearchChange={mockOnSearchChange} />);
 
     const input = document.querySelector('input');
 
@@ -26,7 +26,7 @@ describe('App - container', () => {
   });
 
   it('should not call `onSearchChange` on key press if input value has no more than 3 characters', () => {
-    const component = render(<DogsRecipesSeacher onSearchChange={mockOnSearchChange} />);
+    const component = render(<CocktailsSeacher onSearchChange={mockOnSearchChange} />);
     const inputElement = component.container.querySelector('input');
 
     if (inputElement) {
@@ -37,7 +37,7 @@ describe('App - container', () => {
   });
 
   it('should call `onSearchChange` on key press if input value has more than 3 characters', () => {
-    const component = render(<DogsRecipesSeacher onSearchChange={mockOnSearchChange} />);
+    const component = render(<CocktailsSeacher onSearchChange={mockOnSearchChange} />);
     const inputElement = component.container.querySelector('input');
 
     if (inputElement) {

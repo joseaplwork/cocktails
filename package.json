@@ -1,5 +1,5 @@
 {
-  "name": "dogs-recipes-book",
+  "name": "cokctails-book",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,7 +22,7 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "node server & react-scripts start",
+    "start": "node server & PORT=3003 react-scripts start",
     "build": "node server & react-scripts build && serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

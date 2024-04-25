@@ -2,8 +2,8 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import App from '../component';
 
-jest.mock('containers/DogsRecipesSearcher');
-jest.mock('containers/DogsRecipesList');
+jest.mock('containers/CocktailsSearcher');
+jest.mock('containers/CocktailsList');
 
 describe('App - container', () => {
   const mockOnEmitAppStarted = jest.fn();
@@ -22,12 +22,12 @@ describe('App - container', () => {
     expect(mockOnEmitAppStarted).toHaveBeenCalled();
   });
 
-  it('should render `DogsRecipesList` and `DogsRecipesSearcher` containers', () => {
+  it('should render `CocktailsList` and `CocktailsSearcher` containers', () => {
     const { queryByTestId } = render(<App onEmitAppStarted={mockOnEmitAppStarted} />);
-    const DogsRecipesList = queryByTestId('DogsRecipesList');
-    const DogsRecipesSearcher = queryByTestId('DogsRecipesSearcher');
+    const CocktailsList = queryByTestId('CocktailsList');
+    const CocktailsSearcher = queryByTestId('CocktailsSearcher');
 
-    expect(DogsRecipesSearcher).toBeTruthy();
-    expect(DogsRecipesList).toBeTruthy();
+    expect(CocktailsSearcher).toBeTruthy();
+    expect(CocktailsList).toBeTruthy();
   });
 });

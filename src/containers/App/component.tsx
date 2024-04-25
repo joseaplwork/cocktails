@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import DogsRecipesSearcher from 'containers/DogsRecipesSearcher';
-import DogsRecipesList from 'containers/DogsRecipesList';
+import CocktailsSearcher from 'containers/CocktailsSearcher/CocktailsSearcher';
+import CocktailsList from 'containers/CocktailsList';
 import { PropsFromRedux } from './index';
 import './styles.scss';
 
@@ -11,8 +11,8 @@ export default function App({ onEmitAppStarted }: PropsFromRedux): JSX.Element {
 
   return (
     <div className="c-app t-bg--white-smoke">
-      <DogsRecipesSearcher />
-      <DogsRecipesList />
+      <CocktailsSearcher />
+      <CocktailsList />
     </div>
   );
 }
