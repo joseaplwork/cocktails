@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { Cocktails } from 'models/cocktails/types';
-import CocktailsList from '../component';
+import List from '../component';
 
-describe('CocktailsList component', () => {
+describe('List component', () => {
   it('should render basic view with', () => {
     const mockCocktails: Cocktails = [];
 
-    render(<CocktailsList cocktails={mockCocktails} />);
+    render(<List cocktails={mockCocktails} />);
 
     const component = document.querySelector('.c-cocktails-list');
 
@@ -17,7 +17,7 @@ describe('CocktailsList component', () => {
   it('should render basic view with no items in the list', () => {
     const mockCocktails: Cocktails = [];
 
-    render(<CocktailsList cocktails={mockCocktails} />);
+    render(<List cocktails={mockCocktails} />);
 
     const cards = document.querySelectorAll('.c-cocktails-list__card');
 
@@ -30,7 +30,7 @@ describe('CocktailsList component', () => {
       { ingredients: 'test2', thumbnail: 'test2', title: 'test2' },
     ];
 
-    render(<CocktailsList cocktails={mockCocktails} />);
+    render(<List cocktails={mockCocktails} />);
 
     const cards = document.querySelectorAll('.c-cocktails-list__card');
 
@@ -40,7 +40,7 @@ describe('CocktailsList component', () => {
   it('should render `has lactose` ribbon', () => {
     const mockCocktails: Cocktails = [{ ingredients: 'cheese', thumbnail: 'test', title: 'test' }];
 
-    render(<CocktailsList cocktails={mockCocktails} />);
+    render(<List cocktails={mockCocktails} />);
 
     const ribbonElement = document.querySelector('.c-cocktails-list__ribbon');
 
@@ -50,7 +50,7 @@ describe('CocktailsList component', () => {
   it('should render the right structure', () => {
     const mockCocktails: Cocktails = [{ ingredients: 'cheese', thumbnail: 'test', title: 'test' }];
 
-    render(<CocktailsList cocktails={mockCocktails} />);
+    render(<List cocktails={mockCocktails} />);
 
     const imgElement = document.querySelector('img');
     const ribbonElement = document.querySelector('.c-cocktails-list__ribbon');

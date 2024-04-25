@@ -1,8 +1,8 @@
 import React from 'react';
-import { PropsFromRedux } from './CocktailsList';
+import { PropsFromRedux } from './List';
 import './styles.scss';
 
-export default function CocktailsList({ cocktails }: PropsFromRedux): JSX.Element {
+export default function List({ cocktails }: PropsFromRedux): JSX.Element {
   return (
     <div className="c-cocktails-list">
       <div className="o-container c-cocktails-list__cards u-margin--bottom-md">
