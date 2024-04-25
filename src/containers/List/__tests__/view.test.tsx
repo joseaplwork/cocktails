@@ -5,7 +5,7 @@ import { Cocktails } from 'models/cocktails';
 
 import List from '../view';
 
-describe('List view', () => {
+describe('List component', () => {
   it('should render basic view with', () => {
     const mockCocktails: Cocktails = [];
 

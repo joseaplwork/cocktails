@@ -6,7 +6,7 @@ import App from '../view';
 jest.mock('containers/SearchBar/SearchBar');
 jest.mock('containers/List/List');
 
-describe('App view', () => {
+describe('App component', () => {
   const mockOnEmitAppStarted = jest.fn();
 
   it('should render basic view', () => {

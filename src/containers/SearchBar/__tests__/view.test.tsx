@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react';
 
 import SearchBar from '../view';
 
-describe('SearchBar view', () => {
+describe('SearchBar component', () => {
   const mockOnSearchChange = jest.fn();
 
   beforeEach(() => {
