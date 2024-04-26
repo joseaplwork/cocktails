@@ -22,7 +22,7 @@
   "scripts": {
     "start": "node server & PORT=3003 react-scripts start",
     "start:prod": "npm run build && node server",
-    "build": "react-scripts build && node server",
+    "build": "react-scripts build",
     "test": "react-scripts test --silent",
     "lint": "eslint src",
     "eject": "react-scripts eject"
