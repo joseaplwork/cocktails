@@ -2,7 +2,7 @@ import React from 'react';
 
 import SearchIcon from 'components/SearchIcon';
 
-import './component.scss';
+import './input-search.component.scss';
 
 interface Props {
   onKeyPress: (event: React.KeyboardEvent<HTMLInputElement>) => void;

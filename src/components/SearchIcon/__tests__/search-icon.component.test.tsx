@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import SearchIcon from '../component';
+import SearchIcon from '../search-icon.component';
 
 describe('SearchIcon component', () => {
   it('should render basic view with class', () => {

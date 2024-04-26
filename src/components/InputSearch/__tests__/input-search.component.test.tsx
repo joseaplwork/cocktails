@@ -1,6 +1,6 @@
 import { render, fireEvent, screen } from '@testing-library/react';
 
-import InputSearch from '../component';
+import InputSearch from '../input-search.component';
 
 describe('InputSearch component', () => {
   const mockOnKeyPress = jest.fn();

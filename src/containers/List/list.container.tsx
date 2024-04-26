@@ -3,7 +3,7 @@ import { connect, ConnectedProps } from 'react-redux';
 import { RootState } from 'setup/types';
 import { cocktailsSelector, loadingSelector, errorSelector } from 'models/cocktails';
 
-import SearchBar from './component';
+import SearchBar from './list.component';
 
 const connector = connect(
   (state: RootState) => ({

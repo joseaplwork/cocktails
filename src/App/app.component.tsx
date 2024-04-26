@@ -1,7 +1,7 @@
 import SearchBar from 'containers/SearchBar';
 import List from 'containers/List';
 
-import './component.scss';
+import './app.component.scss';
 
 export default function App() {
   return (

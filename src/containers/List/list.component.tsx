@@ -1,6 +1,6 @@
-import { PropsFromRedux } from './container';
+import { PropsFromRedux } from './list.container';
 
-import './component.scss';
+import './list.component.scss';
 
 export default function List({ cocktails, loading, error }: PropsFromRedux) {
   if (cocktails === null) {

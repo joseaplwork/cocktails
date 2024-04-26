@@ -2,9 +2,9 @@ import React from 'react';
 
 import InputSearch from 'components/InputSearch';
 
-import { PropsFromRedux } from './container';
+import { PropsFromRedux } from './search-bar.container';
 
-import './component.scss';
+import './search-bar.component.scss';
 
 export default function SearchBar({ onSearchChange }: PropsFromRedux) {
   const onInputSearchChange = (evt: React.KeyboardEvent<HTMLInputElement>): void => {
