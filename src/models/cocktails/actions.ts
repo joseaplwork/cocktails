@@ -15,7 +15,7 @@ export function fetchCocktailsSuccess(json: T.CocktailsResponse): T.FetchCocktai
   };
 }
 
-export function emitFetchCocktailsError(): T.EmitFetchCocktailsError {
+export function fetchCocktailsError(): T.fetchCocktailsError {
   return {
     type: AT.FETCH_COCKTAILS_ERROR,
   };

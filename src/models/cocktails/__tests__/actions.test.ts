@@ -1,15 +1,7 @@
-import { emitFetchCocktailsError, fetchCocktails, fetchCocktailsSuccess } from '../actions';
+import { fetchCocktailsError, fetchCocktails, fetchCocktailsSuccess } from '../actions';
 import { actionTypes as at } from '../constants';
 
 describe('cocktails - actions', () => {
-  it('should return the correct object for action `emitFetchCocktailsError`', () => {
-    const expected = {
-      type: at.FETCH_COCKTAILS_ERROR,
-    };
-
-    expect(emitFetchCocktailsError()).toEqual(expected);
-  });
-
   it('should return the correct object for action `fetchCocktails`', () => {
     const query = 'garlic';
     const expected = {
@@ -30,5 +22,13 @@ describe('cocktails - actions', () => {
     };
 
     expect(fetchCocktailsSuccess(json)).toEqual(expected);
+  });
+
+  it('should return the correct object for action `fetchCocktailsError`', () => {
+    const expected = {
+      type: at.FETCH_COCKTAILS_ERROR,
+    };
+
+    expect(fetchCocktailsError()).toEqual(expected);
   });
 });

@@ -1,7 +1,7 @@
 import { SagaIterator } from '@redux-saga/types';
 import { takeLatest, put, call } from 'redux-saga/effects';
 
-import { emitFetchCocktailsError, fetchCocktailsSuccess } from './actions';
+import { fetchCocktailsError, fetchCocktailsSuccess } from './actions';
 import { endpoint, actionTypes as at } from './constants';
 import * as T from './types';
 
@@ -18,7 +18,7 @@ export function* fetchCocktailsSaga({ payload }: T.FetchCocktails): SagaIterator
 
     yield put(fetchCocktailsSuccess(data as T.CocktailsResponse));
   } catch (error) {
-    yield put(emitFetchCocktailsError());
+    yield put(fetchCocktailsError());
   }
 }
 

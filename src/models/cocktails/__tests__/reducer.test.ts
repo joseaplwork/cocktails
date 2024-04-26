@@ -17,7 +17,11 @@ describe('Cocktails - reducer', () => {
 
   it('should update the state when action with type `FETCH_COCKTAILS_SUCCESS` is called', () => {
     const cocktails = [{ idDrink: 'test', strDrink: 'test', strDrinkThumb: 'test', strIngredient1: 'test' }];
-    const expected = { cocktails: [{ ingredients: 'test', thumbnail: 'test', title: 'test' }], loading: false };
+    const expected = {
+      cocktails: [{ ingredients: 'test', thumbnail: 'test', title: 'test' }],
+      loading: false,
+      error: false,
+    };
     const json = {
       drinks: cocktails,
     };
