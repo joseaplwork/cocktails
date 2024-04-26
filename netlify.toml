@@ -1,8 +1,6 @@
-[functions]
-  external_node_modules = ["express"]
-  node_bundler = "esbuild"
 [[redirects]]
-  force = true
-  from = "/*"
+  from = "/api"
+  to = "http://www.thecocktaildb.com/api/json/v1/1/search.php"
   status = 200
-  to = "/.netlify/functions/api/:splat"
+  force = true
+  headers = {X-From = "Netlify"}
