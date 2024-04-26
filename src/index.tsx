@@ -1,16 +1,15 @@
 import { Provider } from 'react-redux';
 import { createRoot } from 'react-dom/client';
-import React from 'react';
 
 import store from './setup/store';
-import AppConnected from './containers/App';
+import App from './components/App';
 
 import './index.scss';
 
 const Init = () => {
   return (
     <Provider store={store}>
-      <AppConnected />
+      <App />
     </Provider>
   );
 };

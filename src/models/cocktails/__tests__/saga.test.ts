@@ -2,7 +2,7 @@ import { put, call } from 'redux-saga/effects';
 
 import { CocktailsResponse } from '../types';
 import { fetchCocktailsSaga, fetchCocktailsApi } from '../sagas';
-import { fetchCocktails, fetchCocktailsSuccess, emitFetchCocktailsFinish } from '../actions';
+import { fetchCocktails, fetchCocktailsSuccess, EmitFetchCocktailsError } from '../actions';
 
 describe('Cocktails - saga', () => {
   it('should call to the api and return the response to the store', () => {
@@ -15,6 +15,6 @@ describe('Cocktails - saga', () => {
 
     expect(gen.next().value).toEqual(call(fetchCocktailsApi, query));
     expect(gen.next(data).value).toEqual(put(fetchCocktailsSuccess(data as CocktailsResponse)));
-    expect(gen.next().value).toEqual(put(emitFetchCocktailsFinish()));
+    expect(gen.next().value).toEqual(put(EmitFetchCocktailsError()));
   });
 });

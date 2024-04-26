@@ -2,11 +2,11 @@ import React from 'react';
 
 import InputSearch from 'components/InputSearch';
 
-import { PropsFromRedux } from './SearchBarContainer';
+import { PropsFromRedux } from './container';
 
-import './styles.scss';
+import './component.scss';
 
-export default function SearchBar({ onSearchChange }: PropsFromRedux): JSX.Element {
+export default function SearchBar({ onSearchChange }: PropsFromRedux) {
   const onInputSearchChange = (evt: React.KeyboardEvent<HTMLInputElement>): void => {
     const { value } = evt.currentTarget;
 

@@ -9,3 +9,11 @@ export const cocktailsReducerSelector = (state: RootState): T.CocktailsState => 
 export const cocktailsSelector = createSelector(cocktailsReducerSelector, usersReducer => {
   return usersReducer.cocktails;
 });
+
+export const loadingSelector = createSelector(cocktailsReducerSelector, usersReducer => {
+  return usersReducer.loading;
+});
+
+export const errorSelector = createSelector(cocktailsReducerSelector, usersReducer => {
+  return usersReducer.error;
+});

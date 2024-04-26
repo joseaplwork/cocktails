@@ -10,7 +10,9 @@ export type Cocktails = Array<{
 }>;
 
 export interface CocktailsState {
-  cocktails: Cocktails;
+  cocktails: Cocktails | null;
+  loading: boolean;
+  error: boolean;
 }
 
 /* ACTIONS */
@@ -28,11 +30,11 @@ export interface FetchCocktails extends AnyAction {
   };
 }
 
-export interface EmitFetchCocktailsFinish extends AnyAction {
-  type: typeof AT.EMIT_FETCH_COCKTAILS_FINISH;
+export interface EmitFetchCocktailsError extends AnyAction {
+  type: typeof AT.FETCH_COCKTAILS_ERROR;
 }
 
-export type CocktailsActions = FetchCocktails | FetchCocktailsSuccess | EmitFetchCocktailsFinish;
+export type CocktailsActions = FetchCocktails | FetchCocktailsSuccess | EmitFetchCocktailsError;
 
 /* ACTIONS DATA */
 export interface CocktailsDTO {

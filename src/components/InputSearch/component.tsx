@@ -2,14 +2,14 @@ import React from 'react';
 
 import SearchIcon from 'components/SearchIcon';
 
-import './styles.scss';
+import './component.scss';
 
 interface Props {
   onKeyPress: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   placeholder: string;
 }
 
-export default function InputSearch({ onKeyPress, placeholder }: Props): JSX.Element {
+export default function InputSearch({ onKeyPress, placeholder }: Props) {
   return (
     <div className="c-input-search">
       <SearchIcon size="1em" className="c-input-search__icon" />

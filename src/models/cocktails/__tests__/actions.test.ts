@@ -1,13 +1,13 @@
-import { emitFetchCocktailsFinish, fetchCocktails, fetchCocktailsSuccess } from '../actions';
+import { emitFetchCocktailsError, fetchCocktails, fetchCocktailsSuccess } from '../actions';
 import { actionTypes as at } from '../constants';
 
 describe('cocktails - actions', () => {
-  it('should return the correct object for action `emitFetchCocktailsFinish`', () => {
+  it('should return the correct object for action `emitFetchCocktailsError`', () => {
     const expected = {
-      type: at.EMIT_FETCH_COCKTAILS_FINISH,
+      type: at.FETCH_COCKTAILS_ERROR,
     };
 
-    expect(emitFetchCocktailsFinish()).toEqual(expected);
+    expect(emitFetchCocktailsError()).toEqual(expected);
   });
 
   it('should return the correct object for action `fetchCocktails`', () => {

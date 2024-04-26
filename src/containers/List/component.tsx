@@ -1,10 +1,20 @@
-import React from 'react';
+import { PropsFromRedux } from './container';
 
-import { PropsFromRedux } from './ListContainer';
+import './component.scss';
 
-import './styles.scss';
+export default function List({ cocktails, loading, error }: PropsFromRedux) {
+  if (cocktails === null) {
+    return null;
+  }
 
-export default function List({ cocktails }: PropsFromRedux): JSX.Element {
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center">Error</div>;
+  }
+
   return (
     <div className="c-cocktails-list">
       <div className="o-container c-cocktails-list__cards u-margin--bottom-md">

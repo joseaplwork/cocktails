@@ -52,7 +52,6 @@
     "eslint-plugin-prettier": "3.1.2",
     "express": "4.19.2",
     "express-request-proxy": "2.2.2",
-    "http-proxy-middleware": "^3.0.0",
     "prettier": "1.19.1",
     "sass": "1.75.0",
     "serve": "14.2.3"

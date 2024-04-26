@@ -1,10 +1,10 @@
+@import './scss/1-settings';
+@import './scss/3-elements';
+@import './scss/4-objects';
+@import './scss/5-utilities';
+
 #root {
   font-size: 18px;
   height: 100%;
   width: 100%;
 }
-
-@import './styles/1-settings';
-@import './styles/3-elements';
-@import './styles/4-objects';
-@import './styles/5-utilities';

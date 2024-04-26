@@ -1,9 +1,8 @@
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 
-import InputSearch from '../InputSearch';
+import InputSearch from '../component';
 
-jest.mock('components/SearchIcon/SearchIcon');
+jest.mock('components/SearchIcon/component.tsx');
 
 describe('InputSearch component', () => {
   const mockOnKeyPress = jest.fn();
@@ -21,10 +20,10 @@ describe('InputSearch component', () => {
   });
 
   it('should render an input and an icon', () => {
-    const { queryByTestId, container } = render(<InputSearch placeholder="" onKeyPress={mockOnKeyPress} />);
+    const { container } = render(<InputSearch placeholder="" onKeyPress={mockOnKeyPress} />);
 
     const inputElement = container.querySelector('input');
-    const searchIconElement = queryByTestId('SearchIcon');
+    const searchIconElement = screen.queryByTestId('SearchIcon');
 
     expect(inputElement).toBeInTheDocument();
     expect(searchIconElement).toBeTruthy();

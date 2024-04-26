@@ -2,13 +2,11 @@ import { connect, ConnectedProps } from 'react-redux';
 
 import { fetchCocktails } from 'models/cocktails';
 
-import SearchBar from './SearchBarComponent';
+import SearchBar from './component';
 
-const mapDispatchToProps = {
+const connector = connect(null, {
   onSearchChange: fetchCocktails,
-};
-
-const connector = connect(null, mapDispatchToProps);
+});
 
 export type PropsFromRedux = ConnectedProps<typeof connector>;
 
