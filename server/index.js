@@ -8,5 +8,5 @@ const port = 3005;
 app.use(cors());
 app.use(express.static('build'));
 app.all('/api/', requestProxy({ url: 'http://www.thecocktaildb.com/api/json/v1/1/search.php' }));
-app.listen(port, () => console.log(`Server listening on port http://localhost:${port}!👂🚀`));
+app.listen(port, () => console.log(`Server listening on port http://localhost:${port} !👂🚀`));
 /* eslint-enable */

@@ -133,6 +133,14 @@
   padding-top: 1.5rem !important;
 }
 
+.u-padding-sm {
+  padding: 0.5rem !important;
+}
+
+.u-padding-md {
+  padding: 1.5rem !important;
+}
+
 .u-no-padding {
   padding: 0 !important;
 }
@@ -192,4 +200,10 @@
 
 .u-no-margin {
   margin: 0 !important;
+}
+
+// LAYOUT
+
+.u-text-align--center {
+  text-align: center !important;
 }

@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "5.17.0",
-    "@testing-library/react": "13.4.0",
-    "@testing-library/user-event": "13.5.0",
-    "@types/jest": "27.5.2",
+    "@testing-library/jest-dom": "6.4.2",
+    "@testing-library/react": "15.0.4",
+    "@testing-library/user-event": "14.5.2",
+    "@types/jest": "28.1.8",
     "@types/node": "16.18.96",
     "@types/react": "18.2.79",
     "@types/react-dom": "18.2.25",
@@ -23,7 +23,7 @@
     "start": "node server & PORT=3003 react-scripts start",
     "start:prod": "npm run build && node server",
     "build": "react-scripts build && node server",
-    "test": "react-scripts test",
+    "test": "react-scripts test --silent",
     "lint": "eslint src",
     "eject": "react-scripts eject"
   },
