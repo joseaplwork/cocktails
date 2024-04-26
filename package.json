@@ -23,6 +23,7 @@
     "start": "node server & PORT=3003 react-scripts start",
     "build": "react-scripts build && node server",
     "test": "react-scripts test",
+    "lint": "eslint src",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

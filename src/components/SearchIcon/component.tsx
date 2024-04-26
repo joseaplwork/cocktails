@@ -5,7 +5,14 @@ interface Props {
 
 export default function SearchIcon({ className, size }: Props) {
   return (
-    <svg width={size} height={size} className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <svg
+      data-testid="SearchIcon"
+      width={size}
+      height={size}
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+    >
       <path
         d="M508.874,478.708L360.142,329.976c28.21-34.827,45.191-79.103,45.191-127.309c0-111.75-90.917-202.667-202.667-202.667
 			S0,90.917,0,202.667s90.917,202.667,202.667,202.667c48.206,0,92.482-16.982,127.309-45.191l148.732,148.732
