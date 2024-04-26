@@ -13,7 +13,7 @@ export default function CocktailsReducer(
 ): T.CocktailsState {
   switch (action.type) {
     case AT.FETCH_COCKTAILS:
-      return { ...state, cocktails: [], loading: true };
+      return { ...state, cocktails: [], error: false, loading: true };
     case AT.FETCH_COCKTAILS_SUCCESS:
       const { drinks } = action.payload.json as T.CocktailsResponse;
       const cocktails =
