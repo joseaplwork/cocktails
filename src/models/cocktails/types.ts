@@ -30,11 +30,11 @@ export interface FetchCocktails extends AnyAction {
   };
 }
 
-export interface fetchCocktailsError extends AnyAction {
+export interface FetchCocktailsError extends AnyAction {
   type: typeof AT.FETCH_COCKTAILS_ERROR;
 }
 
-export type CocktailsActions = FetchCocktails | FetchCocktailsSuccess | fetchCocktailsError;
+export type CocktailsActions = FetchCocktails | FetchCocktailsSuccess | FetchCocktailsError;
 
 /* ACTIONS DATA */
 export interface CocktailsDTO {

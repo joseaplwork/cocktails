@@ -19,9 +19,9 @@ describe('SearchBar component', () => {
     render(<SearchBar onSearchChange={mockOnSearchChange} />);
 
     const input = screen.getByPlaceholderText('Type your message and press Enter to continue');
-    fireEvent.change(input, { target: { value: 'garlic' } });
+    fireEvent.change(input, { target: { value: 'gin tonic' } });
     fireEvent.keyPress(input, { key: 'Enter', keyCode: 13 });
 
-    expect(mockOnSearchChange).toHaveBeenCalledWith('garlic');
+    expect(mockOnSearchChange).toHaveBeenCalledWith('gin%20tonic');
   });
 });
