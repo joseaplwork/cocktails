@@ -17,6 +17,8 @@
     margin: 0 auto;
     overflow: hidden;
     width: 100%;
+    position: relative;
+    z-index: 5;
   }
 
   &__image {
